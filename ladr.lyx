@@ -1,0 +1,694 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\options format=acmsmall, review=false, screen=true
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Selected Solutions to Linear Algebra Done Right
+\end_layout
+
+\begin_layout Author
+Remy Wang
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\R}{\mathbb{R}}
+{\mathbb{R}}
+\end_inset
+
+ 
+\begin_inset FormulaMacro
+\newcommand{\C}{\mathbb{C}}
+{\mathbb{C}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Excercises 1C
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+5
+\series default
+ Is 
+\begin_inset Formula $\R^{2}$
+\end_inset
+
+ a subspace of of the complex vector space 
+\begin_inset Formula $\C^{2}$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Quote
+No.
+ By definition, a complex vector space is a vector space over 
+\begin_inset Formula $\C$
+\end_inset
+
+.
+ In other words the scalars in a complex vector space are complex numbers.
+ Because 
+\begin_inset Formula $\R^{2}$
+\end_inset
+
+ is not closed under multiplication by a complex number, it is not a subspace
+ of 
+\begin_inset Formula $\C^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Quote
+However, we can define a different vector space using pairs of complex numbers:
+ each element in the vector space is a tuple 
+\begin_inset Formula $(c_{1},c_{2}):c_{1},c_{2}\in\C$
+\end_inset
+
+, but each scalar is a real number.
+ In this case, 
+\begin_inset Formula $\R^{2}$
+\end_inset
+
+ 
+\series bold
+is
+\series default
+ a subspace, because it contains 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, is closed under addition and multiplication by a (real) scalar.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+6
+\series default
+ (a) Is 
+\begin_inset Formula $\{(a,b,c)\in\R^{3}:a^{3}=b^{3}\}$
+\end_inset
+
+ a subspace of 
+\begin_inset Formula $\R^{3}$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Quote
+Yes.
+ First, 
+\begin_inset Formula $(0,0,0)$
+\end_inset
+
+ is in the set.
+ Second, if 
+\begin_inset Formula $a^{3}=b^{3}$
+\end_inset
+
+, then 
+\begin_inset Formula $(xa)^{3}=(xb)^{3}$
+\end_inset
+
+ for any 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Finally, if 
+\begin_inset Formula $a_{1}^{3}=b_{1}^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{2}^{3}=b_{2}^{3}$
+\end_inset
+
+, then 
+\begin_inset Formula $a_{1}=b_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{2}=b_{2}$
+\end_inset
+
+, therefore 
+\begin_inset Formula $(a_{1}+a_{2})^{3}=(b_{1}+b_{2})^{3}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+6
+\series default
+ (b) Is 
+\begin_inset Formula $\{(a,b,c)\in\C^{3}:a^{3}=b^{3}\}$
+\end_inset
+
+ a subspace of 
+\begin_inset Formula $\C^{3}$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Quote
+No.
+ Let 
+\begin_inset Formula $x=1$
+\end_inset
+
+, 
+\begin_inset Formula $y_{1}=-\frac{1}{2}+i\frac{\sqrt{3}}{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $y_{2}=-\frac{1}{2}-i\frac{\sqrt{3}}{2}$
+\end_inset
+
+.
+ Note 
+\begin_inset Formula $y_{1}^{3}=(-\frac{1}{2}+i\frac{\sqrt{3}}{2})(\frac{1}{4}-\frac{3}{4}-i\frac{\sqrt{3}}{2})=(-\frac{1}{2}+i\frac{\sqrt{3}}{2})(-\frac{1}{2}-i\frac{\sqrt{3}}{2})=\frac{1}{4}+\frac{3}{4}=1=x^{3}=y_{2}^{3}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $v_{1}=(x,y_{1},0)$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}=(x,y_{2},0)$
+\end_inset
+
+.
+ Then both 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ are in the set, but not 
+\begin_inset Formula $v_{1}+v_{2}=(2,-1,0)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+12 
+\series default
+Prove that the union of two subspaces of 
+\begin_inset Formula $V$
+\end_inset
+
+ is a subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+ if and only if one contains the other.
+ 
+\end_layout
+
+\begin_layout Quote
+Let the two subspaces be 
+\begin_inset Formula $U$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $u\in U$
+\end_inset
+
+ and 
+\begin_inset Formula $u\not\in W$
+\end_inset
+
+.
+ Then for any 
+\begin_inset Formula $w\in W$
+\end_inset
+
+, 
+\begin_inset Formula $u+w\not\in W$
+\end_inset
+
+ (because otherwise 
+\begin_inset Formula $u+w-w=u\in W$
+\end_inset
+
+, contradicting the assumption).
+ But since 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ and 
+\begin_inset Formula $W\subseteq U\cup W$
+\end_inset
+
+, 
+\begin_inset Formula $w+u\in U\cup W$
+\end_inset
+
+, so it must be the case that 
+\begin_inset Formula $w+u\in U$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $w+u-u=w\in U$
+\end_inset
+
+, and so 
+\begin_inset Formula $W\subseteq U$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+13
+\series default
+ Prove that the union of 3 subspaces of 
+\begin_inset Formula $V$
+\end_inset
+
+ is a subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+ if and only if one of the subspaces contains the other two.
+ 
+\end_layout
+
+\begin_layout Quote
+Suppose 
+\begin_inset Formula $u_{1}\in U_{1}$
+\end_inset
+
+ but 
+\begin_inset Formula $u_{1}\not\in U_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{1}\not\in U_{3}$
+\end_inset
+
+ (if this does not exist, then we have 
+\begin_inset Formula $U_{1}\subseteq U_{2}\cup U_{3}$
+\end_inset
+
+, and by 
+\series bold
+12 
+\series default
+either 
+\begin_inset Formula $U_{2}\subseteq U_{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{1}\subseteq U_{3}$
+\end_inset
+
+ or 
+\begin_inset Formula $U_{3}\subseteq U_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{1}\subseteq U_{2}$
+\end_inset
+
+).
+ Then by the same reasoning in 
+\series bold
+12
+\series default
+, for any 
+\begin_inset Formula $u_{2}\in U_{2}$
+\end_inset
+
+ we must have 
+\begin_inset Formula $u_{1}+u_{2}\not\in U_{2}$
+\end_inset
+
+.
+ We now consider two cases: 
+\begin_inset Formula $u_{1}+u_{2}\notin U_{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{1}+u_{2}\in U_{3}$
+\end_inset
+
+.
+ In the first case, because 
+\begin_inset Formula $u_{1}+u_{2}\in U_{1}\cup U_{2}\cup U_{3}$
+\end_inset
+
+, it must be the case that 
+\begin_inset Formula $u_{1}+u_{2}\in U_{1}$
+\end_inset
+
+, therefore 
+\begin_inset Formula $u_{2}\in U_{1}$
+\end_inset
+
+.
+ In the second case when 
+\begin_inset Formula $u_{1}+u_{2}\in U_{3}$
+\end_inset
+
+, we have 
+\begin_inset Formula $u_{1}+u_{1}+u_{2}\notin U_{3}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $u_{1}+u_{1}+u_{2}\notin U_{2}$
+\end_inset
+
+ and also 
+\begin_inset Formula $u_{1}+u_{1}+u_{2}\in U_{1}\cup U_{2}\cup U_{3}$
+\end_inset
+
+, it must be the case that 
+\begin_inset Formula $u_{1}+u_{1}+u_{2}\in U_{1}$
+\end_inset
+
+ and so 
+\begin_inset Formula $u_{2}\in U_{1}$
+\end_inset
+
+.
+ We can repeat the same argument for any 
+\begin_inset Formula $u_{3}\in U_{3}$
+\end_inset
+
+, and finally conclude 
+\begin_inset Formula $U_{2}\subseteq U_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{3}\subseteq U_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+24
+\series default
+ A function 
+\begin_inset Formula $f:\R\rightarrow\R$
+\end_inset
+
+ is called 
+\emph on
+even
+\emph default
+ if 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(-x)=f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for all 
+\begin_inset Formula $x\in\R$
+\end_inset
+
+.
+ A function 
+\begin_inset Formula $f:\R\rightarrow\R$
+\end_inset
+
+ is called 
+\emph on
+odd
+\emph default
+ if 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(-x)=-f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for all 
+\begin_inset Formula $x\in\R$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $V_{e}$
+\end_inset
+
+ denote the set of real-valued even functions on 
+\begin_inset Formula $\R$
+\end_inset
+
+ and let 
+\begin_inset Formula $V_{o}$
+\end_inset
+
+ denote the set of real-valued odd functions on 
+\begin_inset Formula $\R$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $\R^{\R}=V_{e}\oplus V_{o}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Quote
+We shall first show 
+\begin_inset Formula $V_{e}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{o}$
+\end_inset
+
+ are both subspaces of 
+\begin_inset Formula $\R^{\R}$
+\end_inset
+
+.
+ To show a set is a subspace, we need to show it contains the additive identity
+ 
+\begin_inset Formula $0$
+\end_inset
+
+ and that it is closed under addition and scalar multiplication.
+ Both 
+\begin_inset Formula $V_{o}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{e}$
+\end_inset
+
+ contain the constant function 
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+, and it's easy to check that they are both closed under addition and scalar
+ multiplication.
+ 
+\end_layout
+
+\begin_layout Quote
+To show a sum is a direct sum, we need to show the only way to write 
+\begin_inset Formula $0=v_{o}+v_{e}$
+\end_inset
+
+, where 
+\begin_inset Formula $v_{o}\in V_{o}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{e}\in V_{e}$
+\end_inset
+
+, is 
+\begin_inset Formula $v_{o}=v_{e}=0$
+\end_inset
+
+.
+ One direction is easy: if 
+\begin_inset Formula $v_{o}=v_{e}=0$
+\end_inset
+
+ (the constant function returning 0) then 
+\begin_inset Formula $v_{o}+v_{e}=0$
+\end_inset
+
+.
+ To prove the other direction, suppose 
+\begin_inset Formula $v_{o}\neq0$
+\end_inset
+
+.
+ Then there is some 
+\begin_inset Formula $x$
+\end_inset
+
+ such that 
+\begin_inset Formula $v_{o}(x)\neq0$
+\end_inset
+
+.
+ To have 
+\begin_inset Formula $v_{o}+v_{e}=0$
+\end_inset
+
+, we must make sure 
+\begin_inset Formula $v_{e}(x)=-v_{o}(x)$
+\end_inset
+
+.
+ But since 
+\begin_inset Formula $v_{o}(-x)=v_{o}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{e}(-x)=-v_{e}(x)$
+\end_inset
+
+, 
+\begin_inset Formula $v_{o}(-x)+v_{e}(-x)=2v_{o}(x)\neq0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document

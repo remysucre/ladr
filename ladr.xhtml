@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="GENERATOR" content="LyX 2.3.7" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<title>Selected Solutions to Linear Algebra Done Right</title>
+<style type='text/css'>
+/* Layout-provided Styles */
+div.title {
+font-weight: bold;
+font-style: normal;
+font-variant: small-caps;
+font-size: x-large;
+margin-bottom: 1ex;
+text-align: center;
+
+}
+div.author {
+font-style: normal;
+font-variant: small-caps;
+font-size: large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: center;
+
+}
+div.standard {
+text-align: left;
+
+}
+h2.section_ {
+font-weight: normal;
+font-style: normal;
+font-variant: small-caps;
+font-size: medium;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: center;
+
+}
+blockquote.quote {
+margin-top: 0.5ex;
+margin-bottom: 0.5ex;
+margin-left: 3ex;
+margin-right: 3ex;
+text-align: left;
+
+}
+
+
+</style>
+</head>
+<body dir="auto">
+<div class="title" id='magicparlabel-1'>Selected Solutions to Linear Algebra Done Right</div>
+<div class="author" id='magicparlabel-2'>Remy Wang</div>
+<div class="standard" id='magicparlabel-3'> </div>
+<h2 class="section_" id='magicparlabel-4'>Excercises 1C</h2>
+<div class="standard" id='magicparlabel-13660'><b>5</b> Is <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>R</mi>
+    </mstyle>
+   </mrow>
+   <mrow><mn>2</mn>
+   </mrow>
+  </msup>
+ </mrow></math> a subspace of of the complex vector space <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>C</mi>
+    </mstyle>
+   </mrow>
+   <mrow><mn>2</mn>
+   </mrow>
+  </msup>
+ </mrow></math>? </div>
+
+<blockquote class="quote" id='magicparlabel-6'><div class="quote_item">No. By definition, a complex vector space is a vector space over <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mstyle mathvariant='double-struck'><mi>C</mi>
+  </mstyle>
+ </mrow></math>. In other words the scalars in a complex vector space are complex numbers. Because <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>R</mi>
+    </mstyle>
+   </mrow>
+   <mrow><mn>2</mn>
+   </mrow>
+  </msup>
+ </mrow></math> is not closed under multiplication by a complex number, it is not a subspace of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>C</mi>
+    </mstyle>
+   </mrow>
+   <mrow><mn>2</mn>
+   </mrow>
+  </msup>
+ </mrow></math>. </div>
+<div class="quote_item">However, we can define a different vector space using pairs of complex numbers: each element in the vector space is a tuple <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>c</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo>
+    <msub>
+     <mrow><mi>c</mi>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>:</mo>
+   <msub>
+    <mrow><mi>c</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>,</mo>
+   <msub>
+    <mrow><mi>c</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <mstyle mathvariant='double-struck'><mi>C</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math>, but each scalar is a real number. In this case, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>R</mi>
+    </mstyle>
+   </mrow>
+   <mrow><mn>2</mn>
+   </mrow>
+  </msup>
+ </mrow></math> <b>is</b> a subspace, because it contains <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <mrow><mn>0</mn><mo>,</mo><mn>0</mn>
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math>, is closed under addition and multiplication by a (real) scalar. </div>
+</blockquote>
+<div class="standard" id='magicparlabel-8'><b>6</b> (a) Is <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>{<mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> &isin; </mo>
+   <msup>
+    <mrow>
+     <mstyle mathvariant='double-struck'><mi>R</mi>
+     </mstyle>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup><mo>:</mo>
+   <msup>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup><mo>=</mo>
+   <msup>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup>}
+  </mrow>
+ </mrow></math> a subspace of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>R</mi>
+    </mstyle>
+   </mrow>
+   <mrow><mn>3</mn>
+   </mrow>
+  </msup>
+ </mrow></math>? </div>
+
+<blockquote class="quote" id='magicparlabel-9'><div class="quote_item">Yes. First, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <mrow><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn>
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> is in the set. Second, if <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup><mo>=</mo>
+   <msup>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math>, then <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo>(</mo><mi>x</mi><mi>a</mi>
+   <msup>
+    <mrow><mo>)</mo>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup><mo>=</mo><mo>(</mo><mi>x</mi><mi>b</mi>
+   <msup>
+    <mrow><mo>)</mo>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> for any <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>x</mi>
+ </mrow></math>. Finally, if <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <msubsup>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msubsup>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <msubsup>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msubsup>
+  </mrow>
+ </mrow></math>, then <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, therefore <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo>(</mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+   <msup>
+    <mrow><mo>)</mo>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup><mo>=</mo><mo>(</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+   <msup>
+    <mrow><mo>)</mo>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math>. </div>
+</blockquote>
+<div class="standard" id='magicparlabel-10'><b>6</b> (b) Is <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>{<mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> &isin; </mo>
+   <msup>
+    <mrow>
+     <mstyle mathvariant='double-struck'><mi>C</mi>
+     </mstyle>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup><mo>:</mo>
+   <msup>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup><mo>=</mo>
+   <msup>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup>}
+  </mrow>
+ </mrow></math> a subspace of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>C</mi>
+    </mstyle>
+   </mrow>
+   <mrow><mn>3</mn>
+   </mrow>
+  </msup>
+ </mrow></math>? </div>
+
+<blockquote class="quote" id='magicparlabel-11'><div class="quote_item">No. Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>x</mi><mo>=</mo><mn>1</mn>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>y</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>=</mo><mo>-</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </mfrac><mo>+</mo><mi>i</mi>
+   <mfrac>
+    <mrow>
+     <msqrt><mn>3</mn>
+     </msqrt>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>y</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo>=</mo><mo>-</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </mfrac><mo>-</mo><mi>i</mi>
+   <mfrac>
+    <mrow>
+     <msqrt><mn>3</mn>
+     </msqrt>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math>. Note <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>y</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msubsup><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo>
+    <mfrac>
+     <mrow><mn>1</mn>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </mfrac><mo>+</mo><mi>i</mi>
+    <mfrac>
+     <mrow>
+      <msqrt><mn>3</mn>
+      </msqrt>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </mfrac>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <mfrac>
+     <mrow><mn>1</mn>
+     </mrow>
+     <mrow><mn>4</mn>
+     </mrow>
+    </mfrac><mo>-</mo>
+    <mfrac>
+     <mrow><mn>3</mn>
+     </mrow>
+     <mrow><mn>4</mn>
+     </mrow>
+    </mfrac><mo>-</mo><mi>i</mi>
+    <mfrac>
+     <mrow>
+      <msqrt><mn>3</mn>
+      </msqrt>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </mfrac>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo>
+    <mfrac>
+     <mrow><mn>1</mn>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </mfrac><mo>+</mo><mi>i</mi>
+    <mfrac>
+     <mrow>
+      <msqrt><mn>3</mn>
+      </msqrt>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </mfrac>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo>
+    <mfrac>
+     <mrow><mn>1</mn>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </mfrac><mo>-</mo><mi>i</mi>
+    <mfrac>
+     <mrow>
+      <msqrt><mn>3</mn>
+      </msqrt>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </mfrac>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mn>4</mn>
+    </mrow>
+   </mfrac><mo>+</mo>
+   <mfrac>
+    <mrow><mn>3</mn>
+    </mrow>
+    <mrow><mn>4</mn>
+    </mrow>
+   </mfrac><mo>=</mo><mn>1</mn><mo>=</mo>
+   <msup>
+    <mrow><mi>x</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msup><mo>=</mo>
+   <msubsup>
+    <mrow><mi>y</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msubsup>
+  </mrow>
+ </mrow></math>. Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>x</mi><mo>,</mo>
+    <msub>
+     <mrow><mi>y</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo><mn>0</mn>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>x</mi><mo>,</mo>
+    <msub>
+     <mrow><mi>y</mi>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msub><mo>,</mo><mn>0</mn>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>. Then both <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>v</mi>
+   </mrow>
+   <mrow><mn>1</mn>
+   </mrow>
+  </msub>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>v</mi>
+   </mrow>
+   <mrow><mn>2</mn>
+   </mrow>
+  </msub>
+ </mrow></math> are in the set, but not <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mn>2</mn><mo>,</mo><mo>-</mo><mn>1</mn><mo>,</mo><mn>0</mn>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>. </div>
+</blockquote>
+<div class="standard" id='magicparlabel-17'><b>12 </b>Prove that the union of two subspaces of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>V</mi>
+ </mrow></math> is a subspace of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>V</mi>
+ </mrow></math> if and only if one contains the other. </div>
+
+<blockquote class="quote" id='magicparlabel-35'><div class="quote_item">Let the two subspaces be <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>U</mi>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>W</mi>
+ </mrow></math>. Suppose <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>u</mi><mo> &isin; </mo><mi>U</mi>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>u</mi><mo> / </mo><mo> &isin; </mo><mi>W</mi>
+  </mrow>
+ </mrow></math>. Then for any <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>w</mi><mo> &isin; </mo><mi>W</mi>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>u</mi><mo>+</mo><mi>w</mi><mo> / </mo><mo> &isin; </mo><mi>W</mi>
+  </mrow>
+ </mrow></math> (because otherwise <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>u</mi><mo>+</mo><mi>w</mi><mo>-</mo><mi>w</mi><mo>=</mo><mi>u</mi><mo> &isin; </mo><mi>W</mi>
+  </mrow>
+ </mrow></math>, contradicting the assumption). But since <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>w</mi><mo> &isin; </mo><mi>W</mi>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>W</mi><mo> &sube; </mo><mi>U</mi><mo> &cup; </mo><mi>W</mi>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>w</mi><mo>+</mo><mi>u</mi><mo> &isin; </mo><mi>U</mi><mo> &cup; </mo><mi>W</mi>
+  </mrow>
+ </mrow></math>, so it must be the case that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>w</mi><mo>+</mo><mi>u</mi><mo> &isin; </mo><mi>U</mi>
+  </mrow>
+ </mrow></math>. Therefore, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>w</mi><mo>+</mo><mi>u</mi><mo>-</mo><mi>u</mi><mo>=</mo><mi>w</mi><mo> &isin; </mo><mi>U</mi>
+  </mrow>
+ </mrow></math>, and so <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>W</mi><mo> &sube; </mo><mi>U</mi>
+  </mrow>
+ </mrow></math>. </div>
+</blockquote>
+<div class="standard" id='magicparlabel-11493'><b>13</b> Prove that the union of 3 subspaces of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>V</mi>
+ </mrow></math> is a subspace of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>V</mi>
+ </mrow></math> if and only if one of the subspaces contains the other two. </div>
+
+<blockquote class="quote" id='magicparlabel-12636'><div class="quote_item">Suppose <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> but <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo> / </mo><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo> / </mo><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> (if this does not exist, then we have <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo> &sube; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &cup; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, and by <b>12 </b>either <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &sube; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo> &sube; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> or <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub><mo> &sube; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo> &sube; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>). Then by the same reasoning in <b>12</b>, for any <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> we must have <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> / </mo><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>. We now consider two cases: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &notin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>. In the first case, because <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo> &cup; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &cup; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, it must be the case that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, therefore <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>. In the second case when <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, we have <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &notin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>. Because <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &notin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> and also <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo> &cup; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &cup; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, it must be the case that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> and so <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>. We can repeat the same argument for any <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>u</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, and finally conclude <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub><mo> &sube; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>3</mn>
+    </mrow>
+   </msub><mo> &sube; </mo>
+   <msub>
+    <mrow><mi>U</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>. </div>
+</blockquote>
+<div class="standard" id='magicparlabel-21293'><b>24</b> A function <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>f</mi><mo>:</mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle><mo> &rarr; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math> is called <em>even</em> if </div>
+
+<div class="standard" id='magicparlabel-21314'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>f</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo><mi>x</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mi>f</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math></div>
+
+<div class="standard" id='magicparlabel-21318'>for all <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>x</mi><mo> &isin; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math>. A function <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>f</mi><mo>:</mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle><mo> &rarr; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math> is called <em>odd</em> if </div>
+
+<div class="standard" id='magicparlabel-21336'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>f</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo><mi>x</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mo>-</mo><mi>f</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math></div>
+
+<div class="standard" id='magicparlabel-21359'>for all <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>x</mi><mo> &isin; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math>. Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>V</mi>
+   </mrow>
+   <mrow><mi>e</mi>
+   </mrow>
+  </msub>
+ </mrow></math> denote the set of real-valued even functions on <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mstyle mathvariant='double-struck'><mi>R</mi>
+  </mstyle>
+ </mrow></math> and let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>V</mi>
+   </mrow>
+   <mrow><mi>o</mi>
+   </mrow>
+  </msub>
+ </mrow></math> denote the set of real-valued odd functions on <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mstyle mathvariant='double-struck'><mi>R</mi>
+  </mstyle>
+ </mrow></math>. Show that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow>
+     <mstyle mathvariant='double-struck'><mi>R</mi>
+     </mstyle>
+    </mrow>
+    <mrow>
+     <mstyle mathvariant='double-struck'><mi>R</mi>
+     </mstyle>
+    </mrow>
+   </msup><mo>=</mo>
+   <msub>
+    <mrow><mi>V</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo> &oplus; </mo>
+   <msub>
+    <mrow><mi>V</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>. </div>
+
+<blockquote class="quote" id='magicparlabel-21389'><div class="quote_item">We shall first show <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>V</mi>
+   </mrow>
+   <mrow><mi>e</mi>
+   </mrow>
+  </msub>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>V</mi>
+   </mrow>
+   <mrow><mi>o</mi>
+   </mrow>
+  </msub>
+ </mrow></math> are both subspaces of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>R</mi>
+    </mstyle>
+   </mrow>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>R</mi>
+    </mstyle>
+   </mrow>
+  </msup>
+ </mrow></math>. To show a set is a subspace, we need to show it contains the additive identity <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>0</mn>
+ </mrow></math> and that it is closed under addition and scalar multiplication. Both <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>V</mi>
+   </mrow>
+   <mrow><mi>o</mi>
+   </mrow>
+  </msub>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>V</mi>
+   </mrow>
+   <mrow><mi>e</mi>
+   </mrow>
+  </msub>
+ </mrow></math> contain the constant function <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>f</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>, and it's easy to check that they are both closed under addition and scalar multiplication. </div>
+<div class="quote_item">To show a sum is a direct sum, we need to show the only way to write <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>0</mn><mo>=</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, where <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>V</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo> &isin; </mo>
+   <msub>
+    <mrow><mi>V</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>, is <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>. One direction is easy: if <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math> (the constant function returning 0) then <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>. To prove the other direction, suppose <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo> &ne; </mo><mn>0</mn>
+  </mrow>
+ </mrow></math>. Then there is some <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>x</mi>
+ </mrow></math> such that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> &ne; </mo><mn>0</mn>
+  </mrow>
+ </mrow></math>. To have <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>, we must make sure <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mo>-</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>. But since <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo><mi>x</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo><mi>x</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mo>-</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo><mi>x</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo><mi>x</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mn>2</mn>
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mi>o</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> &ne; </mo><mn>0</mn>
+  </mrow>
+ </mrow></math>. </div>
+</blockquote>
+</body>
+</html>
